@@ -4,22 +4,37 @@
 This repository contains an exploratory data analysis (EDA) project on the Titanic dataset. The goal of this analysis is to explore the dataset, clean and preprocess the data, and uncover insights regarding the survival of passengers based on different features.
 
 ## Dataset
-The dataset used in this analysis is the Titanic dataset, which includes information about passengers such as:
-- PassengerId
-- Survived (target variable: 0 = No, 1 = Yes)
-- Pclass (Ticket class: 1st, 2nd, 3rd)
-- Name
-- Sex
-- Age
-- SibSp (Number of siblings/spouses aboard)
-- Parch (Number of parents/children aboard)
-- Ticket
-- Fare (Passenger fare)
-- Cabin
-- Embarked (Port of Embarkation: C = Cherbourg, Q = Queenstown, S = Southampton)
+The dataset used in this analysis includes three files:
+- **train.csv**: Training dataset with labeled survival outcomes.
+- **test.csv**: Unlabeled dataset used for testing predictions.
+- **gender_submission.csv**: Sample submission file.
+
+### Key Observations
+- **Age Distribution**:
+  - Most passengers are young adults.
+  - 76 passengers were younger than 40 years old.
+  - 341 passengers were older than 40 years old, with most in their 30s.
+  - **82% of the passengers were young adults.**
+
+- **Class Distribution**:
+  - The third class was the most occupied.
+  - Passenger distribution by class:
+    1. **Third Class**: 217 passengers
+    2. **First Class**: 107 passengers
+    3. **Second Class**: 93 passengers
+  - **More than 52% of passengers traveled in third class.**
+
+- **Gender Distribution**:
+  - **Males:** 265 passengers
+  - **Females:** 152 passengers
+  - **Passengers were more likely to be male (~64% male).**
+
+- **Survival Rates**:
+  - **Total Survivors:** 152 passengers (~36% survival rate)
+  - **Total Deaths:** 266 passengers (~64% mortality rate)
 
 ## Objectives
-- Perform data cleaning and handling of missing values.
+- Perform data cleaning and handle missing values.
 - Conduct exploratory analysis to understand patterns and correlations.
 - Visualize key insights using graphs and plots.
 - Identify factors that influenced passenger survival.
@@ -67,17 +82,9 @@ pip install -r requirements.txt
 jupyter notebook Titanic_EDA.ipynb
 ```
 
-## Insights and Findings
-- **Women had a significantly higher survival rate than men.**
-- **Passengers in 1st class had better survival chances than those in 2nd or 3rd class.**
-- **Children (lower age group) had a higher likelihood of survival.**
-- **Passengers who embarked from Cherbourg (C) had higher survival rates.**
-
 ## Future Improvements
 - Feature engineering for predictive modeling.
 - Building a machine learning model to predict survival.
 - Deployment of an interactive dashboard for visualization.
 
 ---
-
-📌 *Feel free to contribute by opening issues or submitting pull requests!*
